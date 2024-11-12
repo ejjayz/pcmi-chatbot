@@ -12,6 +12,9 @@
             height: 100%;
             background-color: black;
             overflow: hidden;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
         }
         .background-image {
             position: absolute;
@@ -20,8 +23,21 @@
             transform: translateX(-50%);
             width: 40%;
             height: 40%;
-            object-fit: cover;            
-            z-index: 1; /* Ensure it's above the background */
+            object-fit: cover;
+            z-index: 1;
+        }
+        .title {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .subtitle {
+            position: absolute;
+            top: 60px;
+            width: 100%;
+            font-size: 1.2em;
         }
     </style>
 </head>
@@ -32,6 +48,8 @@
         Your browser does not support the video tag.
     </video>
     -->
+    <div class="title">PCMI - ChatBot</div>
+    <div class="subtitle">You can chat to our AI about specific questions about our Church</div>
     <img src="gif/bot.gif" class="background-image" alt="Background GIF">
     <script>
         (function(){
