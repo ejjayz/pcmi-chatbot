@@ -73,10 +73,12 @@
                 fs = d.getElementsByTagName("script")[0];
                 fs.parentNode.insertBefore(js, fs);
                 js.onload = function() {
-                    if(window.Tars){
-                        window.Tars.init(window.tarsSettings);
-                        window.Tars.showChat();
-                    }
+                    setTimeout(function() {
+                        if(window.Tars){
+                            window.Tars.init(window.tarsSettings);
+                            window.Tars.showChat();
+                        }
+                    }, 2000); // 2 seconds delay
                 };
             }
         })();
